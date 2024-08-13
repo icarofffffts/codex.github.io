@@ -1,0 +1,159 @@
+
+
+<html lang="pt/br"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">FrostTheKing</title>
+    <link rel="icon" href="images/G5o4E7kLC9TE.png">
+    <link rel="stylesheet" href="css/dxxk24dDpOjf.css">
+    <link rel="stylesheet" href="css/9Jw7OKFohRG3.css">
+    <link rel="stylesheet" href="css/RXHup1qNuBbR.css">
+    <link rel="stylesheet" href="css/card_music.css">
+</head>
+<body>
+<script>
+	function audioPlay() {
+			var audio = document.getElementById("audio");
+			audio.volume = 0.5;
+            audio.currentTime = 0;
+			audio.play();
+	}
+
+    function disablesong() {
+        audio.pause();
+    }
+
+    function enablesong() {
+        audio.play();
+    }
+</script>
+
+<audio loop="" preload="auto" id="audio">
+    <!-- A origem da música será definida dinamicamente usando JavaScript -->
+</audio>
+
+
+<input type="checkbox" autocomplete="off" id="overlay-toggle">
+<div class="overlay fullscreen">
+	<label for="overlay-toggle" onclick="audioPlay(); ">
+		<span class="overlayno-hover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
+		<span class="overlayhover hover" style="font-family: monospace; font-size: 0.6em;">click</span>
+	</label>
+</div>
+
+<video autoplay="" loop="" muted="" id="backgroundVideo">
+    <!-- O src será definido dinamicamente usando JavaScript -->
+</video>
+
+<div class="container">
+    <div class="profile">
+        <div class="img">
+            <img class="orep7" src="pngs/theking.png">
+        </div>
+        <div class="rep7">FrostTheKing</div>
+        <div class="rep7 irep7">manodostri.</div>
+        <div class="badges">
+            <div class="badge" style="background-image: url('images/cS3naTNoeV90.svg');" data-tooltip="Apoiador Inicial"></div>
+            <div class="badge" style="background-image: url('images/UvqT7YVSuIzO.svg');" data-tooltip="Assinante desde 25 de nov. de 2017"></div>
+            <div class="badge" style="background-image: url('images/boost12month.svg');" data-tooltip="Impulsionando o servidor desde 11 de nov. de 2022"></div>
+            <div class="badge" style="background-image: url('images/Verified_Bot_Developer.svg');" data-tooltip="Verified Bot Developer"></div>
+            <div class="badge" style="background-image: url('images/Active_Developer.svg');" data-tooltip="Active Developer"></div>
+        </div>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/frostthekingdev/" target="_blank" class="social-button">
+                <i class="fab fa-instagram social-icon"></i>
+            </a>
+            <a href="https://discord.gg/compreaqui" target="_blank" class="social-button">
+                <i class="fab fa-discord social-icon"></i>
+            </a>
+        </div>
+        <div class="7button">
+            <div class="7button-text">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</div>
+        </div>
+    </div>
+</div>
+
+<div class="audio-player">
+    <div class="album-cover"></div>
+    <div class="player-controls">
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Name</div>
+            <p class="artist" id="artist">Artist</p>
+        </div>
+        <div class="buttons">
+            <button class="play-btn" onclick="enablesong()">
+                <svg viewBox="0 0 16 16" class="bi bi-play-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white">
+                    <path fill="white" d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"></path>
+                </svg>
+            </button>
+            <button class="pause-btn" onclick="disablesong()">
+                <svg viewBox="0 0 16 16" class="bi bi-pause-fill" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" style="color: white">
+                    <path fill="white" d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Lista de arquivos de música na sua pasta
+    var musicFiles = ['mc-kevin-amassa-a-placa.mp3', 'mc-kevin-encanto-a-quebrada.mp3', 'mc-kevin-veracruz.mp3'];
+
+    // Escolher aleatoriamente um arquivo de música
+    var randomIndex = Math.floor(Math.random() * musicFiles.length);
+    var randomMusic = musicFiles[randomIndex];
+
+    // Obter o elemento de áudio
+    var audio = document.getElementById('audio');
+
+    // Definir a origem do áudio
+    audio.src = 'media/' + randomMusic;
+
+    // Definir o nome e o artista da música atual
+    var songTitleElement = document.getElementById('songTitle');
+    var artistElement = document.getElementById('artist');
+    
+    switch (randomMusic) {
+        case 'mc-kevin-amassa-a-placa.mp3':
+            songTitleElement.textContent = 'Amassa A Placa';
+            artistElement.textContent = 'Mc Kevin';
+            break;
+        case 'mc-kevin-encanto-a-quebrada.mp3':
+            songTitleElement.textContent = 'Encanto A Quebrada';
+            artistElement.textContent = 'Mc Kevin';
+            break;
+        case 'mc-kevin-veracruz.mp3':
+            songTitleElement.textContent = 'Veracruz';
+            artistElement.textContent = 'Mc Kevin';
+            break;
+        default:
+            songTitleElement.textContent = 'Desconhecido';
+            artistElement.textContent = 'Desconhecido';
+    }
+
+    // Iniciar a música
+    audio.load(); // Recarrega o áudio para garantir que a nova origem seja carregada
+    audio.play();
+
+
+    // Lista de arquivos de vídeo na sua pasta
+    var videoFiles = [ 'homemaranha.mp4', 'smoke.mp4', 'nightrain.mp4', 'rain.mp4' ];
+
+    // Escolher aleatoriamente um arquivo de vídeo
+    var randomIndexVideo = Math.floor(Math.random() * videoFiles.length);
+    var randomVideo = videoFiles[randomIndexVideo];
+
+    // Obter o elemento de vídeo
+    var backgroundVideo = document.getElementById('backgroundVideo');
+
+    // Definir a origem do vídeo
+    backgroundVideo.src = 'backgrounds/' + randomVideo;
+
+    // Iniciar o vídeo
+    backgroundVideo.load(); // Recarrega o vídeo para garantir que a nova origem seja carregada
+    backgroundVideo.play();
+
+</script>
+
+</body></html>
+<
